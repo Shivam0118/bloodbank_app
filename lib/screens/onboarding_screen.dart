@@ -14,7 +14,9 @@ class MyOnboardingPage extends StatelessWidget {
             // mainAxisAlignment: MainAxisAlignment.center,
             children: onboardingData
                 .map(
-                  (e) => onboardingWidget(),
+                  (onboardingSingleData) => onboardingWidget(
+                      onboardingSingleData["text"]!,
+                      imageUrl: onboardingSingleData["image_url"]),
                 )
                 .toList(),
           ),
@@ -23,13 +25,16 @@ class MyOnboardingPage extends StatelessWidget {
     );
   }
 
-  Column onboardingWidget() {
+  Widget onboardingWidget(
+    String text, {
+    String? imageUrl,
+  }) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Container(
           child: Image.asset(
-            "assets/health-check.png",
+            imageUrl!,
           ),
         ),
         Container(
