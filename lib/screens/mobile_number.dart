@@ -1,8 +1,7 @@
 import 'dart:ui';
 
+import 'package:bloodbank_app/constants/colors.dart';
 import 'package:flutter/material.dart';
-
-import 'colors.dart';
 
 class MobileNumber extends StatelessWidget {
   const MobileNumber({super.key});
@@ -15,15 +14,13 @@ class MobileNumber extends StatelessWidget {
           width: double.infinity,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
+            // crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               //the enter number field
               Container(
-                color: Colors.white,
                 child: Column(
                   children: [
                     Container(
-                      color: Colors.green.shade100,
                       child: Text(
                         "Enter your mobile number",
                       ),
@@ -43,11 +40,13 @@ class MobileNumber extends StatelessWidget {
                               20,
                             ),
                           )),
-                      child: Text("+91",
-                          style: TextStyle(
-                            fontSize: 18,
-                            color: MyColors.redPrimary,
-                          )),
+                      child: Text(
+                        "+91",
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: MyColors.redPrimary,
+                        ),
+                      ),
                     ),
                   ],
                 ),
