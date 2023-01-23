@@ -18,22 +18,27 @@ class _BloodCounterScreenState extends State<BloodCounterScreen> {
           padding: EdgeInsets.all(8.0),
           child: Column(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  bloodBankDetails(context),
-                  SizedBox(
-                    height: 150,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        bloodDetails(),
-                        bloodCounter(),
-                      ],
-                    ),
-                  )
-                ],
+              SizedBox(
+                width: MediaQuery.of(context).size.width * 48,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    bloodBankDetails(context),
+                    SizedBox(
+                      height: 150,
+                      // width: MediaQuery.of(context).size.width * 48,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          bloodDetails(),
+                          bloodCounter(),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
               ),
               if (counter == 9)
                 Container(
@@ -114,8 +119,8 @@ class _BloodCounterScreenState extends State<BloodCounterScreen> {
           ),
         ),
       ),
-      child: Padding(
-        padding: const EdgeInsets.all(18.0),
+      child: const Padding(
+        padding: EdgeInsets.all(18.0),
         child: Text(
           "Sarita\nBlood\nBank",
           style: TextStyle(
