@@ -1,9 +1,7 @@
 import 'dart:ui';
 
 import 'package:bloodbank_app/constants/colors.dart';
-import 'package:bloodbank_app/screens/onboarding/onboarding2.dart';
 import 'package:flutter/material.dart';
-import 'package:bloodbank_app/screens/onboarding/onboarding0.dart';
 
 class MobileNumber extends StatelessWidget {
   const MobileNumber({super.key});
@@ -11,9 +9,7 @@ class MobileNumber extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SafeArea(
-      child: InkWell(
-        onTap: () => {Navigator.pop(context)},
+      body: SafeArea(
         child: Container(
           width: double.infinity,
           child: Column(
@@ -60,26 +56,34 @@ class MobileNumber extends StatelessWidget {
               SizedBox(
                 height: 67,
               ),
-              Container(
-                height: 53,
-                width: 263,
-                decoration: BoxDecoration(
-                  color: MyColors.redPrimary,
-                  borderRadius: BorderRadius.circular(4),
+              ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.yellow),
                 ),
-                child: Center(
-                  child: Text(
-                    "Login",
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-              )
+                onPressed: () => {},
+                child: Text("Login"),
+              ),
+
+              // Container(
+              //   height: 53,
+              //   width: 263,
+              //   decoration: BoxDecoration(
+              //     color: MyColors.redPrimary,
+              //     borderRadius: BorderRadius.circular(4),
+              //   ),
+              //   child: Center(
+              //     child: Text(
+              //       "Login",
+              //       style: TextStyle(
+              //         color: Colors.white,
+              //       ),
+              //     ),
+              //   ),
+              // )
             ],
           ),
         ),
       ),
-    ));
+    );
   }
 }
