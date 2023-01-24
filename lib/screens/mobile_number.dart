@@ -1,7 +1,9 @@
 import 'dart:ui';
 
 import 'package:bloodbank_app/constants/colors.dart';
+import 'package:bloodbank_app/screens/onboarding/onboarding2.dart';
 import 'package:flutter/material.dart';
+import 'package:bloodbank_app/screens/onboarding/onboarding0.dart';
 
 class MobileNumber extends StatelessWidget {
   const MobileNumber({super.key});
@@ -9,7 +11,9 @@ class MobileNumber extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
+        body: SafeArea(
+      child: InkWell(
+        onTap: () => {Navigator.pop(context)},
         child: Container(
           width: double.infinity,
           child: Column(
@@ -76,6 +80,6 @@ class MobileNumber extends StatelessWidget {
           ),
         ),
       ),
-    );
+    ));
   }
 }
