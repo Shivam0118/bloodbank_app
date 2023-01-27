@@ -1,5 +1,3 @@
-// ignore_for_file: avoid_unnecessary_containers, duplicate_ignore, sized_box_for_whitespace
-
 import 'dart:developer';
 
 import 'package:bloodbank_app/constants/colors.dart';
@@ -123,6 +121,12 @@ class LoginScreen extends StatelessWidget {
                 },
                 child: const Text("Login"),
               ),
+
+              TextButton(
+                  onPressed: () => {
+                        Navigator.pushNamed(context, Routes.signUpScreen),
+                      },
+                  child: Text("Sign UP")),
 
               // Container(
               //   height: 53,
